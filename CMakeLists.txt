@@ -132,6 +132,8 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(break_down_RGB src/break_down_RGB.cpp)
+add_executable(add_window src/add_window.cpp)
+add_executable(mirror src/mirror.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -147,6 +149,12 @@ add_executable(break_down_RGB src/break_down_RGB.cpp)
 target_link_libraries(break_down_RGB
   ${OpenCV_LIBS}
 #   ${catkin_LIBRARIES}
+)
+target_link_libraries(add_window
+  ${OpenCV_LIBS}
+)
+target_link_libraries(mirror
+  ${OpenCV_LIBS}
 )
 
 #############
